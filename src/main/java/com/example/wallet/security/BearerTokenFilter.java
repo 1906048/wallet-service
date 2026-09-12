@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @Component
 public class BearerTokenFilter extends OncePerRequestFilter {
-docker compose exec postgres psql -U wallet -d wallet
+
     private static final String BEARER_PREFIX = "Bearer ";
     private static final String AUTHORIZATION_HEADER = "Authorization";
 
@@ -43,4 +43,3 @@ docker compose exec postgres psql -U wallet -d wallet
         filterChain.doFilter(request, response);
     }
 }
-
